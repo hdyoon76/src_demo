@@ -31,11 +31,12 @@ public final class SecureNotesServer {
         int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
         HttpServer server = HttpServer.create(new InetSocketAddress("127.0.0.1", port), 0);
         server.createContext("/register", SecureNotesServer::register);
-        server.createContext("/login", SecureNotesServer::login);
+        server.createContext("/login", SecureNotesServer:
         server.createContext("/note", SecureNotesServer::note);
         server.setExecutor(Executors.newFixedThreadPool(4));
         server.start();
-        System.out.println("!!!!!Secure Notes demo listening on http://127.0.0.1:" + port);
+
+        System.out.println("Secure Notes demo listening on http://127.0.0.1:" + port);
     }
 
     private static void register(HttpExchange x) throws IOException {
