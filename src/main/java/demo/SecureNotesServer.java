@@ -36,7 +36,7 @@ public final class SecureNotesServer {
         server.setExecutor(Executors.newFixedThreadPool(4));
         server.start();
 
-        System.out.println("!!Secure Notes demo listening on http://127.0.0.1:" + port);
+        System.out.println("Secure Notes demo listening on http://127.0.0.1:" + port);
     }
 
     private static void register(HttpExchange x) throws IOException {
